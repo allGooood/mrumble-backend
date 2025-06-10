@@ -9,16 +9,16 @@ const categoryOrder = [
 ];
 
 const fetchAllProducts = async () => {
-    console.log('Service::fetchAllProducts')
+    console.log('Service::fetchAllProducts');
 
     const rows = await productModel.getAllProducts();
-    const grouped = rows.reduce((acc, product) => {
-        const category = product.category;
+    const grouped = rows.reduce((acc, curr) => {
+        const category = curr.category;
         if(!acc[category]){
             acc[category] = [];
         }
 
-        acc[category].push(product);
+        acc[category].push(curr);
         return acc;
     }, {});
 

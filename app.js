@@ -36,6 +36,9 @@ app.use(cors());
 const productRoutes = require('./app/routes/product.router');
 app.use('/products', productRoutes);
 
+const cookieRoutes = require('./app/routes/cookie.router');
+app.use('/cookies', cookieRoutes);
+
 // app.get('/', (req, res, next)=>{
 //     console.log('GET / 요청에서만 실행됩니다.');
 //     next();
