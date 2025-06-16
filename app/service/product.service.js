@@ -22,13 +22,6 @@ const fetchAllProducts = async () => {
         return acc;
     }, {});
 
-    // const sorted = categoryOrder
-    //                 .filter(category => grouped[category])
-    //                 .map(category => ({
-    //                     category,
-    //                     items: grouped[category]
-    //                 }));
-
     return grouped;
 };
 

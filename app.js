@@ -33,11 +33,30 @@ app.use(cors());
 //     name: 'session-cookie',
 // }));
 
+
+
+
+
+
 const productRoutes = require('./app/routes/product.router');
 app.use('/products', productRoutes);
 
 const cookieRoutes = require('./app/routes/cookie.router');
 app.use('/cookies', cookieRoutes);
+
+const userRoutes = require('./app/routes/user.router');
+app.use('/users', userRoutes);
+
+const cartRoutes = require('./app/routes/cart.router');
+app.use('/carts', cartRoutes);
+
+const orderRoutes = require('./app/routes/order.router');
+app.use('/orders', orderRoutes);
+
+
+
+
+
 
 // app.get('/', (req, res, next)=>{
 //     console.log('GET / 요청에서만 실행됩니다.');
